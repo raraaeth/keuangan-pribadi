@@ -891,3 +891,447 @@
 
 }
 
+/* ==========================================================
+   Finance Dashboard
+   File : css/cards.css
+   Part : 3/3
+   Description : Card Utilities & Variants
+   ========================================================== */
+
+
+/* =====================================
+   EMPTY CARD
+===================================== */
+
+.empty-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    gap:16px;
+
+    min-height:220px;
+
+}
+
+.empty-card__icon{
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:22px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--surface-alt);
+
+    color:var(--text-muted);
+
+    font-size:34px;
+
+}
+
+.empty-card__title{
+
+    font-size:1rem;
+
+    font-weight:700;
+
+}
+
+.empty-card__description{
+
+    max-width:320px;
+
+    color:var(--text-muted);
+
+}
+
+
+/* =====================================
+   LOADING CARD
+===================================== */
+
+.loading-card{
+
+    min-height:180px;
+
+}
+
+.loading-card .skeleton{
+
+    border-radius:12px;
+
+}
+
+.loading-card__title{
+
+    width:140px;
+
+    height:18px;
+
+}
+
+.loading-card__value{
+
+    width:180px;
+
+    height:42px;
+
+    margin-top:20px;
+
+}
+
+.loading-card__footer{
+
+    width:100%;
+
+    height:14px;
+
+    margin-top:auto;
+
+}
+
+
+/* =====================================
+   GLASS CARD
+===================================== */
+
+.glass-card{
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    background:rgba(255,255,255,.78);
+
+    border:1px solid rgba(255,255,255,.35);
+
+}
+
+
+/* =====================================
+   OUTLINE CARD
+===================================== */
+
+.outline-card{
+
+    border:2px solid var(--border);
+
+    box-shadow:none;
+
+}
+
+
+/* =====================================
+   GRADIENT CARD
+===================================== */
+
+.gradient-card{
+
+    color:#fff;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #2563eb,
+
+        #60a5fa
+
+    );
+
+}
+
+.gradient-card h1,
+.gradient-card h2,
+.gradient-card h3,
+.gradient-card h4,
+.gradient-card strong{
+
+    color:#fff;
+
+}
+
+.gradient-card p{
+
+    color:rgba(255,255,255,.92);
+
+}
+
+
+/* =====================================
+   SUCCESS VARIANT
+===================================== */
+
+.card-success{
+
+    border-left:5px solid var(--success);
+
+}
+
+
+/* =====================================
+   WARNING VARIANT
+===================================== */
+
+.card-warning{
+
+    border-left:5px solid var(--warning);
+
+}
+
+
+/* =====================================
+   DANGER VARIANT
+===================================== */
+
+.card-danger{
+
+    border-left:5px solid var(--danger);
+
+}
+
+
+/* =====================================
+   INFO VARIANT
+===================================== */
+
+.card-info{
+
+    border-left:5px solid var(--info);
+
+}
+
+
+/* =====================================
+   PURPLE VARIANT
+===================================== */
+
+.card-purple{
+
+    border-left:5px solid var(--purple);
+
+}
+
+
+/* =====================================
+   BUDGET STATUS
+===================================== */
+
+.card-safe{
+
+    border-top:5px solid var(--planning-safe);
+
+}
+
+.card-alert{
+
+    border-top:5px solid var(--planning-warning);
+
+}
+
+.card-over{
+
+    border-top:5px solid var(--planning-danger);
+
+}
+
+
+/* =====================================
+   HOVER
+===================================== */
+
+.hover-lift{
+
+    transition:var(--transition);
+
+}
+
+.hover-lift:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.hover-scale{
+
+    transition:var(--transition);
+
+}
+
+.hover-scale:hover{
+
+    transform:scale(1.02);
+
+}
+
+
+/* =====================================
+   ANIMATION
+===================================== */
+
+.card-animate{
+
+    animation:fadeUp .55s ease both;
+
+}
+
+.card-delay-1{
+
+    animation-delay:.08s;
+
+}
+
+.card-delay-2{
+
+    animation-delay:.16s;
+
+}
+
+.card-delay-3{
+
+    animation-delay:.24s;
+
+}
+
+.card-delay-4{
+
+    animation-delay:.32s;
+
+}
+
+
+/* =====================================
+   DASHBOARD HERO
+===================================== */
+
+.hero-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.hero-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    top:-80px;
+
+    right:-80px;
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.hero-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    left:-40px;
+
+    bottom:-40px;
+
+    background:rgba(255,255,255,.05);
+
+}
+
+
+/* =====================================
+   CARD DIVIDER
+===================================== */
+
+.card-divider{
+
+    width:100%;
+
+    height:1px;
+
+    background:var(--border);
+
+}
+
+
+/* =====================================
+   CARD FOOTER
+===================================== */
+
+.card-footer{
+
+    margin-top:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+/* =====================================
+   CARD TAG
+===================================== */
+
+.card-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    padding:6px 12px;
+
+    border-radius:999px;
+
+    background:var(--surface-alt);
+
+    color:var(--text-light);
+
+    font-size:.75rem;
+
+    font-weight:600;
+
+}
+
+
+/* =====================================
+   END OF FILE
+===================================== */
